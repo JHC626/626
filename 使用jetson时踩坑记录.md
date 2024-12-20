@@ -51,17 +51,20 @@ pkgs_dirs:
 此处报错可以删除寒武纪相关安装包来解除
 ```bash
 sudo apt-get purge cambricon-mlu-driver-ubuntu20.04-dkms
+
 ```
 (2)QGIS相关的报错
 ```bash
 sudo nano /etc/apt/sources.list.d/qgis.sources
 ```
 打开后将$your_distributions_codename替换为“jammy”,类似的错误也可能发生在其他的文件中例如
+
 (3)
 ```bash
 sudo nano /etc/apt/sources.list.d/docker.list
 ```
 如果该文件包含 https://download.docker.com/linux/ubuntu， 将其替换为 https://mirrors.aliyun.com/docker-ce/linux/ubuntu/
+
 (4)并且第三条docker的问题实际上并不确定此方法能否实际解决一些报错，在进入第三步安装时，docker的安装也就是 nvidia runtime 实际上还会安装失败，最好的解决办法就是连接外网进行下载，由于实验室条件限制，可以通过局域网代理来解决，通过笔记本电脑上的v2ray软件来实现。
 
 a.打开 ubuntu 设备的设置->network。
